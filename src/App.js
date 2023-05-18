@@ -4,7 +4,7 @@ import Counter from "./Components/Counter.js";
 import Textform from "./Components/Textform.js";
 import axios from "axios";
 import { React, useEffect } from "react";
-import ReactDOM from 'react-dom/client'
+import ReactDOM from "react-dom/client";
 import { Route, Routes } from "react-router-dom";
 // fetch
 function App() {
