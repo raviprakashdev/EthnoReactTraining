@@ -5,7 +5,7 @@ import Textform from "./Components/Textform.js";
 import axios from "axios";
 import { React, useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 // fetch
 function App() {
   // /
@@ -60,21 +60,47 @@ function App() {
   return (
     // props
     <div className="App">
-      {/* <Details fullName = {fullName1} p = {p1}/>
-     <Details fullName = {fullName2} p = {p2}/>
-     <Details fullName = {fullName3} p = {p3}/> */}
-      <Routes>
+      <div className="nav">
+        <div className="link">
+          <Link to="/ravi">Ravi</Link>{" "}
+        </div>
+        <div className="link">
+          <Link to="/sunil">Sunil</Link>
+        </div>
+        <div className="link">
+          <Link to="/renu">Renu</Link>
+        </div>
+      </div>
+      {/* <Details fullName={fullName1} p={p1} />
+      <Details fullName={fullName2} p={p2} />
+      <Details fullName={fullName3} p={p3} /> */}
+      {/* <Routes>
         <Route path="/" element={<Counter heading={fullName1} />} />
         <Route
           path="/details"
           element={<Details fullName={fullName3} p={p3} />}
         />
-        {/* <Route path="/leads" element={<Leads />} /> */}
-        {/* <Route path="/mail" element={<Mail />} /> */}
+      </Routes> */}
+
+      <Routes>
+        <Route
+          path="/ravi"
+          element={<Details fullName={fullName1} p={p1} />}
+        ></Route>
+        <Route
+          path="/sunil"
+          // element={<Details fullName={fullName2} p={p2} />}
+          element={<Counter heading="Counter1" />}
+        ></Route>
+        <Route
+          path="/renu"
+          element={<Details fullName={fullName3} p={p3} />}
+        ></Route>
       </Routes>
+      <Counter heading="Counter1" />
 
       {/* <Counter heading = "Counter1"/> */}
-      {Users.map((e) => {
+      {/* {Users.map((e) => {
         console.log(e.name);
         return (
           // fragment
@@ -84,7 +110,7 @@ function App() {
             <h1>{e.rollNo}</h1>
           </>
         );
-      })}
+      })} */}
 
       {/* {Users.forEach((element) => {
   return (

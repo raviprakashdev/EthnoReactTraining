@@ -43,3 +43,12 @@
 .center{
   text-align: center;
 }
+.nav{
+  display: flex;
+  background-color: grey;
+  color: Blue;
+  justify-content: space-around;
+}
+.link{
+  background-color: aliceblue;
+}
